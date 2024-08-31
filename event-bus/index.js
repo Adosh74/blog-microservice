@@ -14,7 +14,7 @@ app.post('/events', async (req, res) => {
         await axios.post('http://localhost:4001/events', event);
         await axios.post('http://localhost:4002/events', event);
 
-        res.sentStatus(200);
+        res.sendStatus(200);
     } catch (error) {
         console.error(error);
         res.sendStatus(500);
