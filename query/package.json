@@ -1,0 +1,30 @@
+{
+  "name": "query",
+  "version": "1.0.0",
+  "description": "query service for blog",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon -L index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adosh74/blog-microservice.git"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "microservice"
+  ],
+  "author": "Mohamed Shebl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adosh74/blog-microservice/issues"
+  },
+  "homepage": "https://github.com/Adosh74/blog-microservice#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
