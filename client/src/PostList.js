@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import CommentCreate from "./CommentCreate";
 import CommentList from "./CommentList";
+import axios from "axios";
+
 const PostList = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await fetch("http://localhost:4000/posts");
-            const data = await res.json();
-            setPosts(data.data);
+            const res = await axios.get("http://localhost:4002/posts");
+            
+            setPosts(res.data.data);
+            console.log(res.data.data);
+            
         }
         fetchPosts();
     }, []);
@@ -22,7 +26,7 @@ const PostList = () => {
             >
                 <div className="card-body">
                     <h3>{posts[key].title}</h3>
-                    <CommentList postId={posts[key].id} />
+                    <CommentList comments={posts[key].comments} />
                     <CommentCreate postId={posts[key].id} />
                 </div>
             </div>
