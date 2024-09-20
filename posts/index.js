@@ -56,5 +56,6 @@ app.post('/events', (req, res) => {
 })
 
 app.listen(4000, () => {
+    console.log('V 0.0.3');
     console.log(`posts service running on port: ${4000}`)
 })
